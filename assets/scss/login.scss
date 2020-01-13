@@ -1,0 +1,48 @@
+.login {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+.input {
+  margin-bottom: 30px;
+
+  input {
+    width: 300px;
+    padding: 12px 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #757575;
+    font-weight: 300;
+  }
+
+  input[type="button"] {
+    width: 322px;
+    transition: all .5s linear;
+
+    &:hover {
+      background-color: #E67474;
+      color: #fff;
+    }
+  }
+}
+
+a {
+  color: #555;
+  font-size: 16px;
+  margin: 0 20px;
+  transition: all .5s linear;
+
+  &:hover {
+    color: #E67474;
+  }
+}

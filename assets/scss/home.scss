@@ -1,0 +1,24 @@
+.container {
+  height: 3000px;
+}
+
+.screen {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  .background {
+    width: 100%;
+    height: 100%;
+  }
+
+  .dot {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("~@/assets/img/dot.gif") 0 0 repeat;
+    z-index: 2;
+  }
+}

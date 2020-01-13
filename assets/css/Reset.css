@@ -79,7 +79,7 @@ caption, th {
 }
 
 q:before, q:after, blockquote:before, blockquote:after {
-  content: ””;
+  content: "";
 }
 
 ::-webkit-scrollbar {
@@ -88,7 +88,7 @@ q:before, q:after, blockquote:before, blockquote:after {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #69d2e7;
+  background-color: #FE9600;
   border-radius: 30px;
 }
 
