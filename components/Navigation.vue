@@ -6,47 +6,59 @@
       </div>
       <ul class="nav">
         <li class="item">
-          <i class="iconfont icon-fortawesome icon" />
-          <span>首页</span>
-          <div class="border" />
+          <nuxt-link to="/">
+            <i class="iconfont icon-fortawesome home" />
+            <span>首页</span>
+            <div class="border" />
+          </nuxt-link>
         </li>
-        <li class="item">
-          <i class="iconfont icon-archive icon" />
-          <span>归档</span>
-          <div class="border" />
+        <li class="item archive">
+          <nuxt-link to="/archive">
+            <i class="iconfont icon-archive" />
+            <span>归档</span>
+            <div class="border" />
+          </nuxt-link>
         </li>
-        <li class="item">
-          <i class="iconfont icon-qingdan icon" />
-          <span>清单</span>
-          <div class="border" />
+        <li class="item list">
+          <nuxt-link to="/list">
+            <i class="iconfont icon-qingdan" />
+            <span>清单</span>
+            <div class="border" />
+          </nuxt-link>
         </li>
-        <li class="item">
-          <i class="iconfont icon-liuyan icon" />
-          <span>留言板</span>
-          <div class="border" />
+        <li class="item message">
+          <nuxt-link to="/message">
+            <i class="iconfont icon-liuyan" />
+            <span>留言板</span>
+            <div class="border" />
+          </nuxt-link>
         </li>
-        <li class="item">
-          <i class="iconfont icon-lianjie icon" />
-          <span>友人帐</span>
-          <div class="border" />
+        <li class="item friend">
+          <nuxt-link to="/friend">
+            <i class="iconfont icon-lianjie" />
+            <span>友人帐</span>
+            <div class="border" />
+          </nuxt-link>
         </li>
-        <li class="item">
-          <i class="iconfont icon-yezi icon" />
-          <span>关于</span>
-          <div class="border" />
+        <li class="item about">
+          <nuxt-link to="/about">
+            <i class="iconfont icon-yezi" />
+            <span>关于</span>
+            <div class="border" />
+          </nuxt-link>
         </li>
       </ul>
       <div class="operation">
         <nuxt-link to="/search">
-          <i class="iconfont icon-sousuofangdajing icon" />
+          <i class="iconfont icon-sousuo" />
         </nuxt-link>
         <nuxt-link to="/login">
-          <i class="iconfont icon-yonghu icon" />
+          <i class="iconfont icon-yonghu" />
         </nuxt-link>
       </div>
     </div>
     <transition name="translate">
-      <div v-if="flag.top" class="return-area" @click="handleTop" />
+      <div v-if="flag.top" @click="handleTop" class="return-area" />
     </transition>
   </div>
 </template>
