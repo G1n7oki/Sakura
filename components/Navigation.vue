@@ -75,7 +75,8 @@ export default {
       top: 0,
       timer: null,
       delay: 20,
-      speed: 0
+      speed: 0,
+      once: true
     }
   },
   mounted () {
@@ -93,14 +94,18 @@ export default {
       this.flag.top = document.documentElement.scrollTop > 75
     },
     handleTop () {
-      this.timer = setInterval(() => {
-        this.top = document.documentElement.scrollTop
-        this.speed = this.top / 10
-        document.documentElement.scrollTop = this.top - this.speed
-        if (this.top === 0) {
-          clearInterval(this.timer)
-        }
-      }, this.delay)
+      if (this.once) {
+        this.once = false
+        this.timer = setInterval(() => {
+          this.top = document.documentElement.scrollTop
+          this.speed = this.top / 10
+          document.documentElement.scrollTop = this.top - this.speed
+          if (this.top === 0) {
+            clearInterval(this.timer)
+            this.once = true
+          }
+        }, this.delay)
+      }
     }
   }
 }
