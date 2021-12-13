@@ -5,19 +5,20 @@
     </div>
     <el-menu
       mode="horizontal"
-      default-active="/"
+      :default-active="activeMenu"
       active-text-color="#FD9A0D"
+      router
     >
-      <el-menu-item index="/">
+      <el-menu-item index="/dashboard">
         <template slot="title">
           <i class="el-icon-s-home" />
           <span>首页</span>
         </template>
       </el-menu-item>
-      <el-menu-item index="2">
+      <el-menu-item index="/regular/index">
         <template slot="title">
-          <i class="el-icon-question" />
-          <span>占位</span>
+          <i class="iconfont el-icon-regularExpression-o" style="margin-right: 5px" />
+          <span>正则</span>
         </template>
       </el-menu-item>
       <el-menu-item index="3">
@@ -51,7 +52,23 @@
 
 <script>
 export default {
-  name: 'Navbar'
+  name: 'Navbar',
+  data() {
+    return {
+      activeMenu: null
+    }
+  },
+  watch: {
+    $route: {
+      handler: function(route) {
+        this.activeMenu = route.path
+      }
+    },
+    immediate: true
+  },
+  created() {
+    this.activeMenu = this.$route.path
+  }
 }
 </script>
 

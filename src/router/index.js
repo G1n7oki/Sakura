@@ -15,6 +15,17 @@ const routes = [
       component: () => import('@/views/dashboard'),
       meta: { title: '首页' }
     }]
+  },
+  {
+    path: '/regular',
+    component: Layout,
+    redirect: '/regular/index',
+    children: [{
+      path: 'index',
+      name: 'Regular',
+      component: () => import('@/views/regular'),
+      meta: { title: '正则方法' }
+    }]
   }
 ]
 
